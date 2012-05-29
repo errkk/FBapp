@@ -1,12 +1,13 @@
 from django.conf.urls.defaults import patterns, include, url
+from fbapp.fb.views import home
 
 from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'fbapp.views.home', name='home'),
-    url(r'^fbapp/', include('fbapp.foo.urls')),
+    url(r'^$', home, name='home'),
+    url(r'^fbapp/', include('fbapp.fb.urls')),
 
 
     # Uncomment the next line to enable the admin:
