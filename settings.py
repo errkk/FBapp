@@ -27,6 +27,8 @@ DATABASES = {
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
+import dj_database_url
+DATABASES['default'] = dj_database_url.config()
 
 FACEBOOK_APP_ID = 241908765913905
 FACEBOOK_APP_SECRET = '73cdc76cfa626a1a9895d7ee32e26e8f'
